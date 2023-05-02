@@ -1,6 +1,6 @@
-package Services;
+package com.example.homeworck211.Services;
 
-import Entitys.Product;
+import com.example.homeworck211.Entitys.Product;
 
 import java.util.List;
 
