@@ -1,12 +1,11 @@
-package Controllers;
+package com.example.homeworck211.Controllers;
 
-import Entitys.Product;
-import Services.Services;
+import com.example.homeworck211.Services.Services;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import java.util.Set;
 
 @RestController
 public class Controller {
@@ -17,10 +16,10 @@ public class Controller {
     }
     @GetMapping("/add")
     public void prod(@RequestParam int id){
-        services.addProduct(new Product(id));
+        services.addProduct(id);
     }
     @GetMapping("/get")
-    public List<Product> prod(){
+    public Set<Integer> prod(){
         return services.getProduct();
     }
 }
